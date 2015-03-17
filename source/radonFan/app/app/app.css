@@ -1,0 +1,22 @@
+.page {
+	background-color: #ffffff;
+}
+
+.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin:20;
+}
+
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+
+.actionContainer {
+	background-color: #2d45c8;
+	color: #ffffff;
+}

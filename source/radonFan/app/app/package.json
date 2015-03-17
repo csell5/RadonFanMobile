@@ -1,0 +1,6 @@
+{
+	"name": "radon-fan-controller-mobile-app",
+	"main": "app.js",
+	"version": "0.9.0",
+	"description": "The offically awesome mobile app"
+}

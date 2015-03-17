@@ -1,0 +1,22 @@
+
+.mainContainer {
+ 	margin-top: 25px;
+}
+
+.deviceStatus {
+    height: 50%;
+    margin: 10px;
+}
+
+.deviceLabelStatus {
+	text-align: center;
+}
+
+.actionContainer {
+	height: 50px;
+}
+
+.statusGrid {
+	margin-left: 10px;
+	margin-right: 10px;
+}

@@ -1,0 +1,78 @@
+<Page 
+    xmlns="http://www.nativescript.org/tns.xsd" 
+    loaded="pageLoaded" 
+    navigatedTo="pageLoaded"
+    cssClass="page">
+
+  	<GridLayout rows="auto, *, *, auto" cssClass="mainContainer" >
+		
+		<!-- top status -->
+		<GridLayout row="0" cssClass="statusContainer" columns="*, *, *">
+			
+    	     <Border 
+    	     	col="0" 
+    	     	cornerRadius="15" 
+    	     	borderWidth="2" 
+    	     	borderColor="#FF0000"
+    	     	cssClass="deviceStatus">
+				
+        		<Label text="XX" cssClass="deviceLabelStatus"/>
+ 			</Border>
+
+			<Border 
+    	     	col="1" 
+    	     	cornerRadius="15" 
+    	     	borderWidth="2" 
+    	     	borderColor="#28E500"
+    	     	cssClass="deviceStatus">
+				
+        		<Label text="XX" cssClass="deviceLabelStatus" />
+ 			</Border>
+
+ 			<Border 
+    	     	col="2" 
+    	     	cornerRadius="15" 
+    	     	borderWidth="2" 
+    	     	borderColor="#28E500"
+    	     	cssClass="deviceStatus">
+				
+        		<Label text="XX" cssClass="deviceLabelStatus" />		
+ 			</Border>
+
+        </GridLayout>
+
+		<!-- graph over time -->
+		<GridLayout row="1" cssClass="historyContainer" columns="*">
+        	<!-- this will get replaced with the native ios graph control -->
+        	<Image col="0" url="http://api-m2x.att.com/v2/charts/61785bf73d55f1b49d70e612a32c4f5b.png?width=600&height=200&type=values" width="600" height="200"  />
+        </GridLayout>
+
+        <!-- last Activity time -->        
+        <ListView 
+            row="2" 
+            id="statusList" 
+            items="{{ stackStatusItems }}" 
+            cssClass="statusGrid" 
+            itemTap="listViewItemTap">
+
+            <ListView.itemTemplate>
+                <GridLayout columns="125, *, *" >
+                    <Label col="0" text="{{ CreatedAt }}"/>
+                    <Label col="1" text="{{ OutdoorTemp + '° / ' + IndoorTemp + '°' }}"/>
+                    <Label col="2" text="{{ PSI + ' psi' }}" />
+                </GridLayout>
+            </ListView.itemTemplate>
+
+        </ListView>
+        <ActivityIndicator row="2" id="activityIndicator" />  
+        
+        <!-- action row  -->
+		<GridLayout row="3" cssClass="actionContainer" columns="*, *, *, *">
+		    <Button col="0" text="Fan" tap="{{ fanAction }}" />
+		    <Button col="1" text="DeIcer" tap="{{ deicerAction }}" />
+		    <Button col="2" text="Status" tap="refreshStatus" />
+		    <Button col="3" text="..." tap="{{ moreAction }}" />
+        </GridLayout>
+
+	</GridLayout>
+</Page>

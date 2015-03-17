@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo" cssClass="page">
+
+	<StackLayout cssClass="detailContainer" >
+		
+		<Label text="{{ 'Device: ' + statusDetail.Device }}" />
+		<Label text="{{ 'Created At: ' + statusDetail.CreatedAt }}" />
+		<Label text="{{ 'Entry Id: ' + statusDetail.Id }}" />
+		<Label text="{{ 'Outdoor Temp: ' + statusDetail.OutdoorTemp + '°' }}" />
+		<Label text="{{ 'Stack Temp: ' + statusDetail.IndoorTemp + '°' }}" />
+		<Label text="{{ 'Pressure: ' + statusDetail.PSI + ' psi' }}" />
+		
+	</StackLayout>
+
+</Page>
